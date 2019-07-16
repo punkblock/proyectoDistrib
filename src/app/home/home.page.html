@@ -1,14 +1,28 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      App Reconocer Voz
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+<ion-content padding>
+  
+    <ion-label  color=primary >Presione el micrófono para grabar</ion-label>
+    <ion-grid > 
+      <ion-row >
+        <ion-col  >
+          <ion-card >
+            <ion-img  src="assets/Imagenes/mic3.gif"></ion-img>
+
+          </ion-card>
+
+          <ion-button color= "success" expand="full" 
+          (click)= "reproducirAudio()" routerLink = "/vista2">  
+            grabar
+          </ion-button>
+
+        </ion-col>
+      </ion-row>
+    <ion-grid>
+  <ion-content>
