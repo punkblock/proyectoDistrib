@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../services/user-service.service';
 import { Vista3Page } from '../vista3/vista3.page';
-import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 //import { ActivatedRoute } from '@angular/router';//
 
@@ -27,7 +27,7 @@ export class Vista2Page implements OnInit {
   go:boolean=false;
   x: any;
   
-  constructor(public userServiceService: UserServiceService, public navCtrl: NavController) { }//(private activeRoute: ActivatedRoute)
+  constructor(public userServiceService: UserServiceService, private router: Router) { }//(private activeRoute: ActivatedRoute)
   
   ngOnInit() {
   //this.argumentos= this.activeRoute.snapshot.paramMap.get('id');
@@ -36,6 +36,7 @@ export class Vista2Page implements OnInit {
     
     if(this.go===true){
       this.x = setInterval(()=>this.edades(),1000);
+      this.router.navigateByUrl('/vista3');
     }
   }
 
@@ -139,5 +140,6 @@ export class Vista2Page implements OnInit {
     clearInterval(this.x);
     // clearInterval(this.pl);
   }
+
 
 }

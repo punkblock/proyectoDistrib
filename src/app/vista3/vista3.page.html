@@ -8,12 +8,13 @@
 
 <ion-content padding>
 
-    <ion-label color=primary>Es Hombre - Adulto</ion-label>
+    <ion-label color=primary>Es {{sexo}} - {{tipo}}</ion-label>
     <ion-grid>
         <ion-row>
             <ion-col size="10" offset="1">
                 <ion-card>
-                    <ion-img src="assets/Imagenes/adolV.jpg"></ion-img>
+                    <ion-img *ngIf="sexo == masculino " src="assets/Imagenes/adolV.jpg"></ion-img>
+                    <ion-img *ngIf="sexo == femenino " src="assets/Imagenes/adolM.jpg"></ion-img>
 
                     <ion-button expand="full" routerLink="/home">
 
