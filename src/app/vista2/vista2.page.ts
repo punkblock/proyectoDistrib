@@ -20,7 +20,7 @@ export class Vista2Page implements OnInit {
   frecuencia: number = 140;// 140 -> masculino
   lim1: number = 0;
   lim2: number = 0;
-  frecuenciaFundamental: number = 140;// 140 -> anciano(m)
+  frecuenciaFundamental: number = 112;// 140 -> anciano(m)
   sexo: string;
   tipo: string;
   condition: boolean=false;
