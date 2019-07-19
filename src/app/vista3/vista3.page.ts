@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserServiceService } from '../services/user-service.service';
 
 @Component({
   selector: 'app-vista3',
@@ -7,11 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Vista3Page implements OnInit {
 
-  constructor() { }
+  constructor(public userServiceService: UserServiceService) { }
 
-  ngOnInit() {
+  // @Input('texto') seex:string;
+  users: any[] = [];
+
+  ngOnInit() {this.userServiceService.getRangos()
+    .subscribe(
+      (data) => { // Success
+        // this.users = data['results'];
+        console.log(data);
+      },
+      (error) =>{
+        console.error(error);
+      }
+    )
+
+    this.userServiceService.getEdades()
+    .subscribe(
+      (data) => { // Success
+        // this.users = data['results'];
+        console.log(data);
+      },
+      (error) =>{
+        console.error(error);
+      }
+    )
   }
-
   
 
 }
