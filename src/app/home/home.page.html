@@ -1,20 +1,20 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
+  <ion-toolbar min-height=60px color="primary">
+    <ion-title style=text-align:center>
       App Reconocer Voz
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content color="light" padding style=text-align:center>
   
-    <ion-label  color=primary >Presione el micrófono para grabar</ion-label>
+    <h3>Presione el micrófono para grabar</h3>
     <ion-grid > 
       <ion-row >
         <ion-col  >
-          <ion-card >
+          
+          <ion-card style ="margin-top:60px" >
             <ion-img  src="assets/Imagenes/mic3.gif"></ion-img>
-
           </ion-card>
 
           <!-- <ion-button color= "success" expand="full" 
@@ -22,7 +22,7 @@
             grabar
           </ion-button> -->
 
-          <ion-button color= "success" expand="full" 
+          <ion-button shape="round" style ="margin-top:90px" color= "success" expand="full" 
            routerLink = "/vista2">  
             grabar
           </ion-button>
