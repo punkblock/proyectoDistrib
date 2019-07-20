@@ -11,11 +11,11 @@ export class UserServiceService {
 
   //GET (Devuelve rangos de frecuencia para sexo)
   getRangos() {
-      return this.http.get('http://localhost:3000/rangos/');
+      return this.http.get('http://178.128.73.129:3000/rangos/');
     }
   
   // Devuelve rangos de frec. para edad segun sexo
   getEdades() {
-      return this.http.get('http://localhost:3000/edades/');
+      return this.http.get('http://178.128.73.129:3000/edades/');
     }
 }
